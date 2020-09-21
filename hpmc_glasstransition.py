@@ -37,7 +37,7 @@ config.particles.typeid[:] = 11 * [0] + 8 * [1] + 7 * [2]
 
 hoomd.init.read_snapshot(config)
 
-print(config.particles.position)
+#print(config.particles.position)
 
 mc = hoomd.hpmc.integrate.sphere(d=4, seed=1)
 mc.shape_param['A'].set(diameter=2.0)
