@@ -8,7 +8,7 @@ Created on Sun Nov 29 02:04:41 2020
 
 import math
 import numpy
-import pandas
+import pandas as pd
 import hoomd
 import hoomd.md
 import hoomd.hpmc
@@ -18,7 +18,7 @@ import hoomd.deprecated
 
 # Set up Initial Conditions from IDL Code
 
-df = pandas.read_table('rcp6.txt', delim_whitespace=True, names=("x", "y", "z", "radius", "boxLen"))
+df = pd.read_table('rcp6.txt', delim_whitespace=True, names=("x", "y", "z", "radius", "boxLen"))
 
 # Extract box length produced by IDL; info found on 2nd row, 5th column of text file
 boxLen = df.iloc[1,4] 
